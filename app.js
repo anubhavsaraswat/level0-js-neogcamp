@@ -1,12 +1,32 @@
-var btnId=document.querySelector("#btn");
+var btnId = document.querySelector("#btn");
 var txt = document.querySelector("#mytext");
-var out= document.querySelector(".output");
+var out = document.querySelector(".output");
 
-function execute(){
-   out.innerText="pika pikap pp pp "
-};
+// var serverURL = "https://lessonfourapi.tanaypratap.repl.co/translate/yoda.json";
 
+var serverURL = "https://api.funtranslations.com/translate/minion.json";
 
-btnId.addEventListener("click",execute)
+function getTranslationURL(input) {
+  return serverURL + "?" + "text=" + input;
+}
 
+function errorHandler(error) {
+  console.log("error occured", error);
+  alert("something wrong with server:try again ");
+}
 
+function clickHandler() {
+  var inputText = txt.value; //taking input
+
+  fetch(getTranslationURL(inputText)) //processing(input part goes to server ,server process it and shows output)
+    .then((response) => response.json())
+    .then((json) => {
+      var translatedText = json.contents.translated;
+
+      out.innerText = translatedText; //giving output
+    })
+
+    .catch(errorHandler);
+}
+
+btnId.addEventListener("click", clickHandler);

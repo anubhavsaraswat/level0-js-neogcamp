@@ -1,0 +1,63 @@
+body{
+    font-style: italic;
+    margin: 0ex;
+    overflow: hidden;
+   
+}
+
+nav {
+    width: 100%;
+    background-color: rgb(190, 190, 20);
+    text-align: center;
+    margin-bottom: 0.5em;
+    border-bottom-left-radius: 20px;
+    box-sizing: border-box;
+}
+
+#btn {
+    background-color: black;
+    color: yellow;
+    padding: 1.5em 1.5em;
+    border: 2px solid yellow;
+    border-radius: 0.5em;
+    cursor: pointer;
+    margin-top: 1em;
+
+}
+
+#mytext {
+    border: 2px solid black;
+    width: 50%;
+    height: 6em;
+    border-radius: 0.5em;
+    display: block;
+    margin: auto;
+    font-weight: bold;
+    padding: 2em;
+}
+
+h2 {
+    text-align: center;
+
+}
+
+.output {
+    border: 2px solid black;
+    width: 50%;
+    height:6em;
+    border-radius: 0.5em;
+    display: block;
+    margin: auto;
+    font-weight: bold;
+    padding: 1em;
+}
+
+#foot {
+
+    bottom: 0;
+    width: 100%;
+    padding: 2em;
+    background-color: rgb(190, 190, 20);
+    text-align: center;
+    margin-top: 0.5em;
+    border-bottom-right-radius: 20px;
